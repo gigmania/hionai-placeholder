@@ -3,36 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HI on AI | Official Site</title>
+    <meta name="description" content="HI on AI helps teams use artificial intelligence with practical strategy, automation, and implementation support.">
+    <title>HI on AI</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>HI on AI</h1>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="HI on AI home">
+                <span class="brand-mark" aria-hidden="true">HI</span>
+                <span>HI on AI</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#work">Work</a>
+                <a href="#contact">Contact</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </nav>
         </div>
     </header>
 
-    <main class="container">
-        <section>
-            <h2>Welcome to HI on AI</h2>
-            <p>Providing high-quality [Industry/Service Description] to our valued clients. We are committed to excellence and professional service.</p>
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">AI strategy and implementation</p>
+                    <h1>Practical AI systems for real business work.</h1>
+                    <p class="hero-lede">HI on AI helps teams identify high-value AI use cases, prototype fast, and ship reliable automations that fit the way people already work.</p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="mailto:tyson@hionai.net">Start a conversation</a>
+                        <a class="button secondary" href="#work">See focus areas</a>
+                    </div>
+                </div>
+                <div class="signal-panel" aria-label="AI workflow visualization">
+                    <div class="signal-topline">
+                        <span>Workflow readiness</span>
+                        <strong>92%</strong>
+                    </div>
+                    <div class="signal-bars" aria-hidden="true">
+                        <span style="--height: 58%"></span>
+                        <span style="--height: 74%"></span>
+                        <span style="--height: 42%"></span>
+                        <span style="--height: 88%"></span>
+                        <span style="--height: 64%"></span>
+                        <span style="--height: 79%"></span>
+                    </div>
+                    <div class="signal-list">
+                        <p><strong>Discover</strong><span>Map existing process and data sources</span></p>
+                        <p><strong>Design</strong><span>Select the right model, tools, and guardrails</span></p>
+                        <p><strong>Deploy</strong><span>Launch workflows with measurable outcomes</span></p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="contact-info">
-            <h2>Contact Us</h2>
-            <p> tyson at hionai dot net</p>
+        <section id="work" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Focus areas</p>
+                    <h2>AI support where it creates leverage.</h2>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <h3>Workflow Automation</h3>
+                        <p>Turn repeated operational work into assisted or fully automated systems with clear ownership and review points.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Internal Tools</h3>
+                        <p>Build useful AI-enabled tools for research, reporting, customer support, analysis, and team knowledge access.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Advisory</h3>
+                        <p>Evaluate opportunities, vendors, data readiness, risk, and implementation plans before committing engineering time.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-band">
+            <div class="container contact-grid">
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h2>Bring a workflow, a problem, or a rough idea.</h2>
+                </div>
+                <a class="contact-link" href="mailto:tyson@hionai.net">tyson@hionai.net</a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <nav>
-                <a href="index.html">Home</a>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 HI on AI. All rights reserved.</p>
+            <nav aria-label="Footer navigation">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
             </nav>
-            <p>&copy; 2026 HI on AI. All rights reserved.</p>
         </div>
     </footer>
 </body>
