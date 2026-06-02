@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enroll to receive automated operational IT status alerts and notifications from Tysonium.">
+    <title>SMS Signup | Tysonium</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Tysonium home">
+                <span class="brand-mark" aria-hidden="true">TY</span>
+                <span>Tysonium</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="index.html#work">Work</a>
+                <a href="sms.html">SMS</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="legal-main">
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">SMS Notifications</p>
+                <h1>SMS Enrollment</h1>
+                <p>Register below to opt in to automated operational IT status updates, task alerts, and assistant notifications from Tysonium.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="signup-card">
+                <form id="sms-signup-form" class="signup-form" onsubmit="event.preventDefault(); document.getElementById('form-status').style.display='block'; this.reset();">
+                    <div class="form-group">
+                        <label for="mobile" class="form-label">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" class="form-input" placeholder="+1 (555) 000-0000" pattern="^\+?[1-9]\d{1,14}$" title="Please enter a valid mobile number with country code, e.g. +15550000000" required>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" class="checkbox-input" required>
+                        <label for="consent" class="checkbox-label">
+                            I agree to receive automated operational IT status alerts from Tysonium at this number. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help.
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Subscribe to SMS Alerts</button>
+                    </div>
+
+                    <div id="form-status" style="display: none; padding: 14px; border-radius: 8px; background: rgba(15, 118, 110, 0.1); color: var(--accent-dark); font-weight: 600; text-align: center;">
+                        Subscription successful! You have successfully opted in.
+                    </div>
+
+                    <div class="form-links">
+                        Please read our <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms of Service</a> for full opt-in compliance details.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Tysonium. All rights reserved.</p>
+            <nav aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="sms-signup.html">SMS Signup</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
