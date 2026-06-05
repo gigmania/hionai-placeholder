@@ -34,11 +34,38 @@
         </section>
 
         <div class="container">
+            <!-- SMS Opt-in Form -->
+            <div class="signup-card" style="margin-top: 0; margin-bottom: 40px;">
+                <h2 style="font-size: 1.5rem; margin-bottom: 20px;">Subscribe to SMS Alerts</h2>
+                <form id="sms-signup-form" class="signup-form" onsubmit="event.preventDefault(); document.getElementById('form-status').style.display='block'; this.reset();">
+                    <div class="form-group">
+                        <label for="mobile" class="form-label">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" class="form-input" placeholder="+1 (555) 000-0000" pattern="^\+?[1-9]\d{1,14}$" title="Please enter a valid mobile number with country code, e.g. +15550000000" required>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" class="checkbox-input" required>
+                        <label for="consent" class="checkbox-label">
+                            I agree to receive automated operational IT status alerts from Tysonium at this number. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help.
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Subscribe to SMS Alerts</button>
+                    </div>
+
+                    <div id="form-status" style="display: none; padding: 14px; border-radius: 8px; background: rgba(15, 118, 110, 0.1); color: var(--accent-dark); font-weight: 600; text-align: center;">
+                        Subscription successful! You have successfully opted in.
+                    </div>
+                </form>
+            </div>
+
             <section class="legal-section highlight">
                 <h2>SMS Terms</h2>
                 <ul>
                     <li>Message frequency varies based on task activity.</li>
                     <li>Message and data rates may apply.</li>
+                    <li>Carriers are not liable for any delayed or undelivered messages.</li>
                     <li>Reply <strong>STOP</strong> to opt out of future SMS notifications.</li>
                     <li>Reply <strong>HELP</strong> for help or contact <a href="mailto:tyson@tysonium.com">tyson@tysonium.com</a>.</li>
                     <li>Mobile opt-in data and consent are not shared with third parties for marketing or promotional purposes.</li>
@@ -52,7 +79,7 @@
 
             <section class="legal-section">
                 <h2>Opt-In Flow</h2>
-                <p>The recipient opts in by configuring their own mobile phone number in a private automation setup controlled by the system owner. The setup explains that SMS notifications will be sent for task status updates, that replies may be used as follow-up prompts, message frequency varies, message and data rates may apply, and STOP and HELP are supported.</p>
+                <p>Users opt in publicly by visiting the dedicated enrollment form on our website at <a href="sms.html">https://tysonium.com/sms.html</a>. The user manually enters their mobile number into the input field and must check an un-ticked consent box stating: "I agree to receive automated operational IT status alerts from Tysonium at this number. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help." No mobile numbers are ever pre-populated or registered without this explicit, verifiable web consent. Full compliance terms are hosted at <a href="terms.html">https://tysonium.com/terms.html</a> and privacy disclosures at <a href="privacy.html">https://tysonium.com/privacy.html</a>.</p>
             </section>
 
             <section class="legal-section">
