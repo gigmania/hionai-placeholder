@@ -28,32 +28,41 @@
         <section class="page-hero">
             <div class="container">
                 <p class="eyebrow">SMS Notifications</p>
-                <h1>SMS Enrollment</h1>
-                <p>Register below to opt in to automated operational IT status updates, task alerts, and assistant notifications from Tysonium.</p>
+                <h1>Contact & Support</h1>
+                <p>Submit a support request or opt in to receive automated operational IT status alerts and notifications from Tysonium.</p>
             </div>
         </section>
 
         <div class="container">
             <div class="signup-card">
-                <form id="sms-signup-form" class="signup-form" onsubmit="event.preventDefault(); document.getElementById('form-status').style.display='block'; this.reset();">
+                <form id="sms-signup-form" class="signup-form" onsubmit="event.preventDefault(); const consent = document.getElementById('consent').checked; document.getElementById('form-status').innerText = consent ? 'Subscription successful! You have opted in to receive SMS alerts.' : 'Thank you! Your message has been received.'; document.getElementById('form-status').style.display='block'; this.reset();">
                     <div class="form-group">
-                        <label for="mobile" class="form-label">Mobile Number</label>
-                        <input type="tel" id="mobile" name="mobile" class="form-input" placeholder="+1 (555) 000-0000" pattern="^\+?[1-9]\d{1,14}$" title="Please enter a valid mobile number with country code, e.g. +15550000000" required>
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile" class="form-label">Mobile Number (Optional)</label>
+                        <input type="tel" id="mobile" name="mobile" class="form-input" placeholder="+1 (555) 000-0000" pattern="^\+?[1-9]\d{1,14}$" title="Please enter a valid mobile number with country code, e.g. +15550000000">
                     </div>
 
                     <div class="checkbox-group">
-                        <input type="checkbox" id="consent" name="consent" class="checkbox-input" required>
+                        <input type="checkbox" id="consent" name="consent" class="checkbox-input">
                         <label for="consent" class="checkbox-label">
                             I agree to receive automated operational IT status alerts from Tysonium at this number. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help.
                         </label>
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="button primary">Subscribe to SMS Alerts</button>
+                        <button type="submit" class="button primary">Submit Request</button>
                     </div>
 
                     <div id="form-status" style="display: none; padding: 14px; border-radius: 8px; background: rgba(15, 118, 110, 0.1); color: var(--accent-dark); font-weight: 600; text-align: center;">
-                        Subscription successful! You have successfully opted in.
                     </div>
 
                     <div class="form-links">

@@ -28,34 +28,43 @@
         <section class="page-hero">
             <div class="container">
                 <p class="eyebrow">SMS Notifications</p>
-                <h1>Personal automation alerts by SMS.</h1>
-                <p>Tysonium SMS notifications are used by the system owner to receive task-completion alerts from automation tools and coding assistants, then reply with follow-up instructions when needed.</p>
+                <h1>Contact & Support</h1>
+                <p>Submit a support request or opt in to receive automated operational IT status alerts and notifications from Tysonium.</p>
             </div>
         </section>
 
         <div class="container">
-            <!-- SMS Opt-in Form -->
+            <!-- Contact & SMS Support Form -->
             <div class="signup-card" style="margin-top: 0; margin-bottom: 40px;">
-                <h2 style="font-size: 1.5rem; margin-bottom: 20px;">Subscribe to SMS Alerts</h2>
-                <form id="sms-signup-form" class="signup-form" onsubmit="event.preventDefault(); document.getElementById('form-status').style.display='block'; this.reset();">
+                <h2 style="font-size: 1.5rem; margin-bottom: 20px;">Contact & Support</h2>
+                <form id="sms-signup-form" class="signup-form" onsubmit="event.preventDefault(); const consent = document.getElementById('consent').checked; document.getElementById('form-status').innerText = consent ? 'Subscription successful! You have opted in to receive SMS alerts.' : 'Thank you! Your message has been received.'; document.getElementById('form-status').style.display='block'; this.reset();">
                     <div class="form-group">
-                        <label for="mobile" class="form-label">Mobile Number</label>
-                        <input type="tel" id="mobile" name="mobile" class="form-input" placeholder="+1 (555) 000-0000" pattern="^\+?[1-9]\d{1,14}$" title="Please enter a valid mobile number with country code, e.g. +15550000000" required>
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile" class="form-label">Mobile Number (Optional)</label>
+                        <input type="tel" id="mobile" name="mobile" class="form-input" placeholder="+1 (555) 000-0000" pattern="^\+?[1-9]\d{1,14}$" title="Please enter a valid mobile number with country code, e.g. +15550000000">
                     </div>
 
                     <div class="checkbox-group">
-                        <input type="checkbox" id="consent" name="consent" class="checkbox-input" required>
+                        <input type="checkbox" id="consent" name="consent" class="checkbox-input">
                         <label for="consent" class="checkbox-label">
                             I agree to receive automated operational IT status alerts from Tysonium at this number. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help.
                         </label>
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="button primary">Subscribe to SMS Alerts</button>
+                        <button type="submit" class="button primary">Submit Request</button>
                     </div>
 
                     <div id="form-status" style="display: none; padding: 14px; border-radius: 8px; background: rgba(15, 118, 110, 0.1); color: var(--accent-dark); font-weight: 600; text-align: center;">
-                        Subscription successful! You have successfully opted in.
                     </div>
                 </form>
             </div>
@@ -79,7 +88,7 @@
 
             <section class="legal-section">
                 <h2>Opt-In Flow</h2>
-                <p>Users opt in publicly by visiting the dedicated enrollment form on our website at <a href="sms.html">https://tysonium.com/sms.html</a>. The user manually enters their mobile number into the input field and must check an un-ticked consent box stating: "I agree to receive automated operational IT status alerts from Tysonium at this number. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help." No mobile numbers are ever pre-populated or registered without this explicit, verifiable web consent. Full compliance terms are hosted at <a href="terms.html">https://tysonium.com/terms.html</a> and privacy disclosures at <a href="privacy.html">https://tysonium.com/privacy.html</a>.</p>
+                <p>Users opt in publicly by visiting the Contact & Support form on our website at <a href="sms.html">https://tysonium.com/sms.html</a>. The user has the option to enter their mobile number and check an un-ticked consent box stating: "I agree to receive automated operational IT status alerts from Tysonium at this number. Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help." This opt-in consent is completely voluntary and is not a required condition to submit the contact form or receive support. No mobile numbers are ever pre-populated or registered without this explicit, voluntary web consent. Full compliance terms are hosted at <a href="terms.html">https://tysonium.com/terms.html</a> and privacy disclosures at <a href="privacy.html">https://tysonium.com/privacy.html</a>.</p>
             </section>
 
             <section class="legal-section">
